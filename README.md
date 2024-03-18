@@ -4,6 +4,8 @@
 
 Este projeto é uma aplicação Angular desenvolvida para melhorar a eficiência na gestão de usuários e de seus benefícios. Com uma interface amigável, nosso sistema substitui plataformas antigas e complicadas, tornando o trabalho até 3x mais rápido e simplificado.
 
+Deploy: https://crud-system-wine.vercel.app/
+
 ## Funcionalidades
 
 - **Gerenciamento de Usuários**: Adicione, atualize, visualize e delete usuários de forma simples e rápida.
