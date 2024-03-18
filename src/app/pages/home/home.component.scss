@@ -45,5 +45,26 @@
 }
 
 .info-spinner{
-  
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #797979;
+  text-align: center;
+  position: relative;
+  top:-62px;
+  margin: 0 auto;
+}
+
+
+// LADO DIREITO
+
+li{
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #868686;
+  padding: 14px 0;
+  margin:0;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #dbdbdb;
+  mat-icon { margin-right: 1rem; font-size: 1.5rem;}
 }
