@@ -68,3 +68,32 @@ li{
   border-bottom: 1px solid #dbdbdb;
   mat-icon { margin-right: 1rem; font-size: 1.5rem;}
 }
+
+.img-perfil{
+  border-radius: 50%;
+  width: 40%;
+}
+
+.container-perfil{
+  width: 100%;
+  text-align: center;
+  h4{
+    font-size: 1rem;
+    color:  #474747;
+    font-weight: 500;
+    margin:  8px 0px 0px 0px;
+      }
+  h5{
+    font-size: 0.9rem;
+    color:  #6d6d6d;
+    font-weight: 400;
+    margin:  2px 0px 0px 0px;
+     }
+     li{ justify-content:  center; color: var(--primary-color); border: none;}
+}
+
+.texto-p{ 
+  font-size:14px;
+  font-style: italic;
+  color: #767676;
+    }
