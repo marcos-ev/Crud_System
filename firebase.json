@@ -1,7 +1,7 @@
 {
   "hosting": [
     {
-      "target": "crud-curso",
+      "target": "crud-system",
       "source": ".",
       "frameworksBackend": {}
     }
