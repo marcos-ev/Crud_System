@@ -3,11 +3,18 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "crud-usuarios": {
+    "crud-curso": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "standalone": false
+        },
+        "@schematics/angular:directive": {
+          "standalone": false
+        },
+        "@schematics/angular:pipe": {
+          "standalone": false
         }
       },
       "root": "",
@@ -15,11 +22,11 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/crud-usuarios",
+            "outputPath": "dist/crud-curso",
             "index": "src/index.html",
-            "main": "src/main.ts",
+            "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -52,12 +59,9 @@
               "outputHashing": "all"
             },
             "development": {
-              "buildOptimizer": false,
               "optimization": false,
-              "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true,
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -72,10 +76,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "crud-usuarios:build:production"
+              "buildTarget": "crud-curso:build:production"
             },
             "development": {
-              "browserTarget": "crud-usuarios:build:development"
+              "buildTarget": "crud-curso:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +87,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "crud-usuarios:build"
+            "buildTarget": "crud-curso:build"
           }
         },
         "test": {
@@ -105,11 +109,28 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "crud-curso:build:production",
+              "serveTarget": "crud-curso:serve:production"
+            },
+            "development": {
+              "buildTarget": "crud-curso:build:development",
+              "serveTarget": "crud-curso:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
   },
   "cli": {
-    "analytics": "ccdf8335-82e8-4b8c-b048-439b4cdd8271"
+    "analytics": false
   }
 }
