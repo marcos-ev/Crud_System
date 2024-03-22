@@ -1,51 +1,51 @@
-# Projeto Crud Users Benefits
+# CRUD Users Benefits Project
 
-## Sobre o Projeto
+## About the Project
 
-Este projeto é uma aplicação Angular desenvolvida para melhorar a eficiência na gestão de usuários e de seus benefícios. Com uma interface amigável, nosso sistema substitui plataformas antigas e complicadas, tornando o trabalho até 3x mais rápido e simplificado.
+This project is an Angular application developed to improve efficiency in managing users and their benefits. With a user-friendly interface, our system replaces old and complicated platforms, making work up to 3x faster and simplified.
 
 Deploy: https://crud-system-wine.vercel.app/
 
-## Funcionalidades
+## Features
 
-- **Gerenciamento de Usuários**: Adicione, atualize, visualize e delete usuários de forma simples e rápida.
-- **Controle de Benefícios**: Gerencie os benefícios oferecidos aos usuários, com a possibilidade de adicionar novos benefícios, editar ou remover existentes.
-- **Dashboard Interativo**: Acompanhe métricas importantes sobre os usuários e benefícios através de nosso painel interativo.
-- **Upload de Foto de Perfil**: Usuários podem adicionar ou alterar suas fotos de perfil.
+- **User Management**: Add, update, view, and delete users easily and quickly.
+- **Benefits Control**: Manage the benefits offered to users, with the ability to add new benefits, edit, or remove existing ones.
+- **Interactive Dashboard**: Track important metrics about users and benefits through our interactive dashboard.
+- **Profile Picture Upload**: Users can add or change their profile pictures.
 
-## Tecnologias Utilizadas
+## Technologies Used
 
 - **Front-end**: Angular
-- **Estilização**: SCSS
-- **Icones**: Angular Material Icons
+- **Styling**: SCSS
+- **Icons**: Angular Material Icons
 - **Backend**: Firebase
 
-## Configuração e Uso do Firebase
+## Firebase Setup and Usage
 
-Para utilizar o Firebase como backend para autenticação e armazenamento de dados, siga os passos abaixo:
+To use Firebase as a backend for authentication and data storage, follow the steps below:
 
-1. **Crie um Projeto no Firebase**: Acesse [Firebase Console](https://console.firebase.google.com/) e crie um novo projeto.
-2. **Adicione seu App Angular ao Projeto Firebase**: Dentro do projeto Firebase, clique em "Adicionar app" e selecione a plataforma web para obter suas configurações específicas.
-3. **Configure o Firebase no Projeto Angular**:
-   - Instale o Firebase em seu projeto Angular utilizando NPM:
+1. **Create a Project on Firebase**: Access [Firebase Console](https://console.firebase.google.com/) and create a new project.
+2. **Add your Angular App to the Firebase Project**: Inside the Firebase project, click on "Add app" and select the web platform to get your specific configurations.
+3. **Configure Firebase in the Angular Project**:
+   - Install Firebase in your Angular project using NPM:
      ```bash
      npm install firebase @angular/fire
      ```
-   - Adicione as configurações do Firebase ao seu ambiente Angular em `src/environments/environment.ts`:
+   - Add Firebase configurations to your Angular environment in `src/environments/environment.ts`:
      ```typescript
      export const environment = {
        production: false,
        firebaseConfig: {
-         apiKey: "sua-api-key",
-         authDomain: "seu-auth-domain",
-         projectId: "seu-project-id",
-         storageBucket: "seu-storage-bucket",
-         messagingSenderId: "seu-messaging-sender-id",
-         appId: "seu-app-id"
+         apiKey: "your-api-key",
+         authDomain: "your-auth-domain",
+         projectId: "your-project-id",
+         storageBucket: "your-storage-bucket",
+         messagingSenderId: "your-messaging-sender-id",
+         appId: "your-app-id"
        }
      };
      ```
-   - Inicialize o Firebase no seu módulo principal (`app.module.ts`), importando o `AngularFireModule` e o `AngularFirestoreModule`:
+   - Initialize Firebase in your main module (`app.module.ts`), importing `AngularFireModule` and `AngularFirestoreModule`:
      ```typescript
      import { AngularFireModule } from '@angular/fire';
      import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -55,56 +55,47 @@ Para utilizar o Firebase como backend para autenticação e armazenamento de dad
        imports: [
          AngularFireModule.initializeApp(environment.firebaseConfig),
          AngularFirestoreModule,
-         // outros imports
+         // other imports
        ],
-       // declarações e bootstrap
+       // declarations and bootstrap
      })
      export class AppModule { }
      ```
 
-4. **Utilize o Firebase para Autenticação e Armazenamento de Dados**:
-   - Autenticação: Utilize o `AngularFireAuth` para adicionar funcionalidades de login.
-   - Armazenamento de Dados: Use o `AngularFirestore` para interagir com o Firestore Database.
-  
-   - ## Como Rodar o Projeto
+4. **Use Firebase for Authentication and Data Storage**:
+   - Authentication: Use `AngularFireAuth` to add login functionalities.
+   - Data Storage: Utilize `AngularFirestore` to interact with the Firestore Database.
 
-```markdown
-## Como Rodar o Projeto
+## How to Run the Project
 
-Para executar este projeto Angular com integração ao Firebase em seu ambiente local, siga as instruções abaixo:
+To run this Angular project with Firebase integration in your local environment, follow the instructions below:
 
-1. **Clone o repositório**:
+1. **Clone the repository**:
    ```bash
-   git clone https://link-para-seu-repositorio.git
+   git clone https://link-to-your-repository.git
    ```
-2. **Entre no diretório do projeto**:
+2. **Navigate to the project directory**:
    ```bash
    cd crud-system
    ```
-3. **Instale as dependências**:
+3. **Install the dependencies**:
    ```bash
    npm install
    ```
-4. **Configure o Ambiente**:
-   - Garanta que o arquivo `src/environments/environment.ts` esteja configurado com as suas credenciais do Firebase, conforme explicado na seção Configuração e Uso do Firebase.
+4. **Set up the Environment**:
+   - Ensure that the `src/environments/environment.ts` file is configured with your Firebase credentials, as explained in the Firebase Setup and Usage section.
 
-5. **Inicie o servidor de desenvolvimento**:
+5. **Start the development server**:
    ```bash
    ng serve
    ```
-   - Para rodar o servidor em uma porta específica, use `ng serve --port <numero-da-porta>`.
+   - To run the server on a specific port, use `ng serve --port <port-number>`.
 
-6. **Acesse a aplicação**:
-   - Se o navegador não abrir automaticamente, você pode acessar manualmente inserindo `http://localhost:4200/` na barra de endereços.
-``
+6. **Access the application**:
+   - If the browser does not open automatically, you can manually access it by entering `http://localhost:4200/` in the address bar.
 
+## Contact
 
-## Contato
+Linkedin - ([https://www.linkedin.com/in/marcos-eduardo-virgili/](https://www.linkedin.com/in/marcos-eduardo-virgili/)) - marcosev@gmail.com
 
-Linkedin - ([https://www.linkedin.com/in/marcos-eduardo-virgili/ ](https://www.linkedin.com/in/marcos-eduardo-virgili/)) - marcosev@gmail.com
-
-Projeto Link: [https://github.com/marcos-ev/Crud_System](https://github.com/marcos-ev/Crud_System)
-
-
-
-
+Project Link: [https://github.com/marcos-ev/Crud_System](https://github.com/marcos-ev/Crud_System)
